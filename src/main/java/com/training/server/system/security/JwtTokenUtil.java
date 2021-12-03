@@ -1,5 +1,6 @@
 package com.training.server.system.security;
 
+import com.training.server.system.security.config.JwtProperties;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -20,10 +21,11 @@ public class JwtTokenUtil implements InitializingBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JwtTokenUtil.class);
 
-    @Value("${jwt.base64-secret}")
-    private String secret;
-    @Value("${jwt.expiration}")
-    private Long expiration;
+    private JwtProperties jwtProperties;
+//    @Value("${jwt.base64-secret}")
+//    private String secret;
+//    @Value("${jwt.expiration}")
+//    private Long expiration;
 
     private Key key;
     private JwtParser jwtParser;
@@ -31,7 +33,7 @@ public class JwtTokenUtil implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
 
-        byte[] keyBytes = Decoders.BASE64.decode(secret);
+        byte[] keyBytes = Decoders.BASE64.decode(jwtProperties.getBase64Key());
         key = Keys.hmacShaKeyFor(keyBytes);
         jwtParser = Jwts.parserBuilder()
                 .setSigningKey(key)
@@ -47,7 +49,7 @@ public class JwtTokenUtil implements InitializingBean {
 
                 .setClaims(claims)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + expiration * 1000))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtProperties.getExpiration() * 1000))
                 .signWith(key, SignatureAlgorithm.HS512)
                 .compact();
     }

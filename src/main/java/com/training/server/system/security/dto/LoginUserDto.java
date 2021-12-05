@@ -1,4 +1,4 @@
-package com.training.server.system.dto;
+package com.training.server.system.security.dto;
 
 import javax.validation.constraints.NotBlank;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
  * @author andy
  * @date 2021/12/2
  */
-public class AuthUserDto extends BaseDto {
+public class LoginUserDto {
 
     @NotBlank
     private String username;

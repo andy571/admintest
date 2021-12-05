@@ -2,7 +2,7 @@ package com.training.server.system.controller;
 
 import com.alicp.jetcache.anno.CacheType;
 import com.alicp.jetcache.anno.Cached;
-import com.training.server.system.dto.AuthUserDto;
+import com.training.server.system.security.dto.LoginUserDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,8 +26,8 @@ public class TestController {
 
     @RequestMapping("/c")
     @ResponseBody
-    public String auth(AuthUserDto authUserDto) {
-        System.out.println(authUserDto);
+    public String auth(LoginUserDto loginUserDto) {
+        System.out.println(loginUserDto);
         return "ok";
 
     }

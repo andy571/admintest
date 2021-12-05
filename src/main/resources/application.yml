@@ -26,6 +26,9 @@ security:
       - /**/*.png
       - /**/*.ico
       - /a/b
+      - /a/c
+      - /auth/login
+      - /auth/logout
 
 
 

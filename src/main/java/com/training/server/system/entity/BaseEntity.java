@@ -15,10 +15,13 @@ public class BaseEntity implements Serializable {
 
     @Column(name = "create_time")
     private LocalDateTime createTime;
+
     @Column(name = "create_by")
     private Long createBy;
+
     @Column(name = "update_time")
     private LocalDateTime updateTime;
+
     @Column(name = "update_by")
     private Long updateBy;
 

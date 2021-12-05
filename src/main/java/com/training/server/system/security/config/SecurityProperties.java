@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @author andy
  * @date 2021/12/3
  */
-//@Configuration
+@Configuration
 public class SecurityProperties {
 
     @Bean

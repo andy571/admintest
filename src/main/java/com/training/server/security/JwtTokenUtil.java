@@ -1,13 +1,12 @@
-package com.training.server.system.security;
+package com.training.server.security;
 
-import com.training.server.system.security.config.JwtProperties;
+import com.training.server.security.config.JwtProperties;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.security.Key;
 import java.util.Date;

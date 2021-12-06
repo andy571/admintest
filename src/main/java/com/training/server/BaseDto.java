@@ -1,9 +1,8 @@
-package com.training.server.system.entity;
+package com.training.server;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import javax.persistence.Column;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -11,18 +10,14 @@ import java.time.LocalDateTime;
  * @author andy
  * @date 2021/11/30
  */
-public class BaseEntity implements Serializable {
+public class BaseDto implements Serializable {
 
-    @Column(name = "create_time")
     private LocalDateTime createTime;
 
-    @Column(name = "create_by")
     private Long createBy;
 
-    @Column(name = "update_time")
     private LocalDateTime updateTime;
 
-    @Column(name = "update_by")
     private Long updateBy;
 
     public LocalDateTime getCreateTime() {

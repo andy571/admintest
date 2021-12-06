@@ -1,4 +1,4 @@
-package com.training.server.system.security;
+package com.training.server.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

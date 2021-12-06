@@ -1,6 +1,6 @@
-package com.training.server.system.security;
+package com.training.server.security;
 
-import com.training.server.system.security.config.UrlProperties;
+import com.training.server.security.config.UrlProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

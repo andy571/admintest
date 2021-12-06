@@ -1,11 +1,11 @@
 package com.training.server.system.entity;
 
+import com.training.server.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
 
 /**
  * @author andy

@@ -1,4 +1,4 @@
-package com.training.server.system.security.config;
+package com.training.server.security.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -11,7 +11,7 @@ public class JwtProperties {
 
     private String tokenHeader;
 
-    private String tokenHead;
+    private String tokenStart;
 
     private String base64Key;
 
@@ -25,12 +25,12 @@ public class JwtProperties {
         this.tokenHeader = tokenHeader;
     }
 
-    public String getTokenHead() {
-        return tokenHead;
+    public String getTokenStart() {
+        return tokenStart;
     }
 
-    public void setTokenHead(String tokenHead) {
-        this.tokenHead = tokenHead;
+    public void setTokenStart(String tokenStart) {
+        this.tokenStart = tokenStart;
     }
 
     public String getBase64Key() {

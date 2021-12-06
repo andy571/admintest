@@ -1,4 +1,4 @@
-package com.training.server.system.security;
+package com.training.server.security;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;

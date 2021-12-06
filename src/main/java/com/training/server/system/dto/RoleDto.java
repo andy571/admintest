@@ -1,9 +1,6 @@
 package com.training.server.system.dto;
 
-import io.swagger.annotations.ApiModelProperty;
-
-import javax.persistence.Column;
-import javax.validation.constraints.NotBlank;
+import com.training.server.BaseDto;
 
 /**
  * @author andy

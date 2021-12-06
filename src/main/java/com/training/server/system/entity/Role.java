@@ -1,5 +1,6 @@
 package com.training.server.system.entity;
 
+import com.training.server.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.Column;

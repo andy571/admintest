@@ -1,5 +1,7 @@
 package com.training.server.system.dto;
 
+import com.training.server.BaseDto;
+
 import java.util.List;
 
 /**

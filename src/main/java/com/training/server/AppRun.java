@@ -1,7 +1,9 @@
-package com.training.server.system;
+package com.training.server;
 
 import com.alicp.jetcache.anno.config.EnableCreateCacheAnnotation;
 import com.alicp.jetcache.anno.config.EnableMethodCache;
+import org.mybatis.spring.annotation.MapperScan;
+import org.mybatis.spring.annotation.MapperScans;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @EnableCreateCacheAnnotation
 @EnableMethodCache(basePackages = "com.training")
+@MapperScan(basePackages = "com.training")
 public class AppRun {
 
     public static void main(String[] args) {

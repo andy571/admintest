@@ -1,4 +1,4 @@
-package com.training.server.system.security.dto;
+package com.training.server.security.dto;
 
 import javax.validation.constraints.NotBlank;
 

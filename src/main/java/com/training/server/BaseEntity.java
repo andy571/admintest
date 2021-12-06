@@ -1,9 +1,9 @@
 package com.training.server;
 
+import io.mybatis.provider.Entity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import javax.persistence.Column;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -13,16 +13,16 @@ import java.time.LocalDateTime;
  */
 public class BaseEntity implements Serializable {
 
-    @Column(name = "create_time")
+    @Entity.Column(value = "create_time")
     private LocalDateTime createTime;
 
-    @Column(name = "create_by")
+    @Entity.Column(value = "create_by")
     private Long createBy;
 
-    @Column(name = "update_time")
+    @Entity.Column(value = "update_time")
     private LocalDateTime updateTime;
 
-    @Column(name = "update_by")
+    @Entity.Column(value = "update_by")
     private Long updateBy;
 
     public LocalDateTime getCreateTime() {

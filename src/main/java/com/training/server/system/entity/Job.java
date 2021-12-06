@@ -1,11 +1,9 @@
 package com.training.server.system.entity;
 
 import com.training.server.BaseEntity;
+import io.mybatis.provider.Entity;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -13,12 +11,11 @@ import javax.validation.constraints.NotNull;
  * @author andy
  * @date 2021/12/1
  */
-@Table(name = "sys_job")
+@Entity.Table("sys_job")
 public class Job extends BaseEntity {
 
-    @Id
     @ApiModelProperty(value = "ID")
-    @Column(name = "job_id")
+    @Entity.Column(id = true, value = "job_id")
     private Long id;
 
     @ApiModelProperty(value = "岗位名称")

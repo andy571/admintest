@@ -22,11 +22,11 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-        String bearerToken = request.getHeader(jwtProperties.getTokenHeader());
-
-        if (bearerToken != null && !bearerToken.isEmpty() && bearerToken.startsWith(jwtProperties.getTokenStart())) {
-
-        }
+//        String bearerToken = request.getHeader(jwtProperties.getTokenHeader());
+//
+//        if (bearerToken != null && !bearerToken.isEmpty() && bearerToken.startsWith(jwtProperties.getTokenStart())) {
+//
+//        }
 
         filterChain.doFilter(request, response);
 

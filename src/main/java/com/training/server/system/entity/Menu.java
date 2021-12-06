@@ -1,22 +1,19 @@
 package com.training.server.system.entity;
 
 import com.training.server.BaseEntity;
+import io.mybatis.provider.Entity;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 /**
  * @author andy
  * @date 2021/12/1
  */
-@Table(name = "sys_menu")
+@Entity.Table(value = "sys_menu")
 public class Menu extends BaseEntity {
 
-    @Id
-    @Column(name = "menu_id")
+    @Entity.Column(id = true, value = "menu_id")
     @NotNull
     @ApiModelProperty(value = "ID", hidden = true)
     private Long id;
@@ -24,7 +21,7 @@ public class Menu extends BaseEntity {
     @ApiModelProperty(value = "菜单标题")
     private String title;
 
-    @Column(name = "name")
+    @Entity.Column(value = "name")
     @ApiModelProperty(value = "菜单组件名称")
     private String componentName;
 

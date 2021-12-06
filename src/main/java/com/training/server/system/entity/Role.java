@@ -1,11 +1,9 @@
 package com.training.server.system.entity;
 
 import com.training.server.BaseEntity;
+import io.mybatis.provider.Entity;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -13,11 +11,10 @@ import javax.validation.constraints.NotNull;
  * @author andy
  * @date 2021/12/1
  */
-@Table(name = "sys_role")
+@Entity.Table(value = "sys_role")
 public class Role extends BaseEntity {
 
-    @Id
-    @Column(name = "role_id")
+    @Entity.Column(id = true, value = "role_id")
     @NotNull
     @ApiModelProperty(value = "ID", hidden = true)
     private Long id;
@@ -29,7 +26,6 @@ public class Role extends BaseEntity {
 //    @ApiModelProperty(value =e "数据权限，全部 、 本级 、 自定义")
 ////    private String dataScop = DataScopeEnum.THIS_LEVEL.getValue();
 
-    @Column(name = "level")
     @ApiModelProperty(value = "级别，数值越小，级别越大")
     private Integer level = 3;
 

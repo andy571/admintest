@@ -1,21 +1,17 @@
 package com.training.server.system.entity;
 
 import com.training.server.BaseEntity;
+import io.mybatis.provider.Entity;
 import io.swagger.annotations.ApiModelProperty;
-
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 /**
  * @author andy
  * @date 2021/11/5
  */
-@Table(name = "sys_user")
+@Entity.Table("sys_user")
 public class User extends BaseEntity {
 
-    @Id
-    @Column(name = "user_id")
+    @Entity.Column(id = true, value = "user_id")
     @ApiModelProperty(value = "ID", hidden = true)
     private Long id;
 

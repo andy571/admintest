@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @EnableCreateCacheAnnotation
 @EnableMethodCache(basePackages = "com.training")
-@MapperScan(basePackages = "com.training")
+@MapperScan(basePackages = "com.training.server.system.mapper")
 public class AppRun {
 
     public static void main(String[] args) {

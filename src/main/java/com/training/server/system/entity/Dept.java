@@ -1,11 +1,9 @@
 package com.training.server.system.entity;
 
 import com.training.server.BaseEntity;
+import io.mybatis.provider.Entity;
 import io.swagger.annotations.ApiModelProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -13,11 +11,10 @@ import javax.validation.constraints.NotNull;
  * @author andy
  * @date 2021/11/30
  */
-@Table(name="sys_dept")
+@Entity.Table(value = "sys_dept")
 public class Dept extends BaseEntity {
 
-    @Id
-    @Column(name = "dept_id")
+    @Entity.Column(id = true, value = "dept_id")
     @ApiModelProperty(value = "ID")
     private Long id;
 
